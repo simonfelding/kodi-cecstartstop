@@ -7,6 +7,8 @@ A user named kodi for the kodi service, in groups render, audio, lp
 # Install procedure
 sudo pip3 install cec
 
+sudo apt install kodi-eventclients-kodi-send
+
 sudo mv *.service /etc/systemd/system/
 
 sudo mv kodistartstop.py /usr/bin/kodistartstop.py
