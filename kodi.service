@@ -1,0 +1,14 @@
+[Unit]
+Description = Kodi Media Center
+After = remote-fs.target network-online.target
+Wants = network-online.target
+
+[Service]
+User = kodi
+Group = kodi
+Type = simple
+ExecStart = /usr/bin/kodi-standalone
+ExecStop = /usr/bin/kodi-send --action "Quit"
+
+[Install]
+WantedBy = multi-user.target
