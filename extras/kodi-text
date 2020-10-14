@@ -1,0 +1,22 @@
+#!/usr/bin/python3
+# Very ugly quick hackjob that inputs text to kodi
+
+import os
+import sys
+
+text = ""
+
+if len(sys.argv[1:]) == 0:
+    raise IOError("enter text..")
+
+for word in sys.argv[1:]:
+	text = text+word+" "
+
+text = text.rstrip()
+string1='curl -v -X POST -H "Content-Type: application/json" -d \'{"jsonrpc":"2.0","method":"Input.SendText","params":{"text":"'
+string2='","done":false}, "id":1}\' http://localhost:8080/jsonrpc'
+
+mes = string1+text+string2
+#print(mes)
+os.system(mes)
+
