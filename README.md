@@ -4,9 +4,9 @@ Made for Raspberry Pi running Raspbian.
 # Requirements
 A user named kodi for the kodi service, in groups render, audio, lp
 
-pip install cec
-
 # Install procedure
+sudo pip3 install cec
+
 sudo mv *.service /etc/systemd/system/
 
 sudo mv kodistartstop.py /usr/bin/kodistartstop.py
