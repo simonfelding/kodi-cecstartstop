@@ -6,10 +6,10 @@ Wants = network-online.target
 [Service]
 User = root
 Group = root
-Type = simple
+Type = idle
 ExecStart = /usr/bin/python3 /usr/bin/kodistartstop.py
 Restart=always
-RestartSec=30
+RestartSec=0
 
 [Install]
 WantedBy = multi-user.target
